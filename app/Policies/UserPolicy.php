@@ -10,7 +10,7 @@ class UserPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can update the given profile.
+     * Определяем, может ли пользователь обновлять данный профиль.
      *
      * @param  \App\User $signedInUser
      * @param  \App\User $user

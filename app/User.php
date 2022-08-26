@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable, HasReputation;
 
     /**
-     * The attributes that are mass assignable.
+     * Атрибуты, которые назначаются массово.
      *
      * @var array
      */
@@ -23,7 +23,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The accessors to append to the model's array form.
+     * Аксессоры для добавления к форме массива модели.
      *
      * @var array
      */
@@ -32,7 +32,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * Атрибуты, которые должны быть скрыты для массивов.
      *
      * @var array
      */
@@ -43,7 +43,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * Атрибуты, которые следует приводить к собственным типам.
      *
      * @var array
      */
@@ -53,7 +53,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the route key name for Laravel.
+     * Получаем имя ключа маршрута для Laravel.
      *
      * @return string
      */
@@ -63,7 +63,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Fetch all threads that were created by the user.
+     * Получить все треды, созданные пользователем.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -73,7 +73,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Fetch the last published reply for the user.
+     * Получаем последний опубликованный ответ для пользователя.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -83,7 +83,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get all activity for the user.
+     * Получить всю активность для пользователя.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -93,7 +93,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Mark the user's account as confirmed.
+     * Помечаем аккаунт пользователя как подтвержденный.
      */
     public function confirm()
     {
@@ -104,7 +104,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Determine if the user is an administrator.
+     * Узнаем, является ли пользователь администратором.
      *
      * @return bool
      */
@@ -117,7 +117,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Determine if the user is an administrator.
+     * Определяем, является ли пользователь администратором.
      *
      * @return bool
      */
@@ -127,7 +127,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Record that the user has read the given thread.
+     * Записываем то, что пользователь прочитал данный тред.
      *
      * @param Thread $thread
      */
@@ -140,7 +140,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the path to the user's avatar.
+     * Получаем маршрут к аватару пользователя.
      *
      * @param  string $avatar
      * @return string
@@ -151,7 +151,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the cache key for when a user reads a thread.
+     * Получаем ключ кэша когда пользователь прочитывает тред.
      *
      * @param  Thread $thread
      * @return string

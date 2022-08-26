@@ -8,7 +8,7 @@ use App\Activity;
 class ProfilesController extends Controller
 {
     /**
-     * Fetch the user's activity feed.
+     * Получить обратную связь активности пользователя.
      *
      * @#param User $user
      */
@@ -20,7 +20,7 @@ class ProfilesController extends Controller
     }
 
     /**
-     * Show the user's profile.
+     * Показать профиль пользователя.
      *
      * @param  User $user
      * @return \Response

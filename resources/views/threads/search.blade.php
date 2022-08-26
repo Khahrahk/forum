@@ -12,16 +12,16 @@
         <div class="flex py-6">
             <div class="mr-10">
                 <div class="widget bg-grey-lightest border p-4">
-                    <h4 class="widget-heading">Search</h4>
+                    <h4 class="widget-heading">Искать</h4>
 
                     <ais-search-box>
-                        <ais-input placeholder="Find a thread..." :autofocus="true" class="w-full"></ais-input>
+                        <ais-input placeholder="Поиск треда..." :autofocus="true" class="w-full"></ais-input>
                     </ais-search-box>
                 </div>
 
                 <div class="widget bg-grey-lightest border p-4">
                     <h4 class="widget-heading">
-                        Filter By Channel
+                        Фильтр по каналам
                     </h4>
 
                     <div class="panel-body">
@@ -34,7 +34,7 @@
                 <ais-results>
                     <template slot-scope="{ result }">
                         <li class="list-reset pb-3">
-                            <a :href="result.path" class="text-blue link">
+                            <a :href="result.path" class="text-black link">
                                 <ais-highlight :result="result" attribute-name="title"></ais-highlight>
                             </a>
                         </li>

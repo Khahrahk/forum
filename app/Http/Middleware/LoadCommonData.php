@@ -8,7 +8,7 @@ use App\Trending;
 class LoadCommonData
 {
     /**
-     * Handle an incoming request.
+     * Обработка входящего запроса.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

@@ -5,7 +5,7 @@ namespace App;
 trait RecordsActivity
 {
     /**
-     * Boot the trait.
+     * Загружаем модель.
      */
     protected static function bootRecordsActivity()
     {
@@ -25,7 +25,7 @@ trait RecordsActivity
     }
 
     /**
-     * Fetch all model events that require activity recording.
+     * Получаем все события, требующие записи активности.
      *
      * @return array
      */
@@ -35,7 +35,7 @@ trait RecordsActivity
     }
 
     /**
-     * Record new activity for the model.
+     * Записываем новую активность для модели.
      *
      * @param string $event
      */
@@ -48,7 +48,7 @@ trait RecordsActivity
     }
 
     /**
-     * Fetch the activity relationship.
+     * Получаем активность.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
@@ -58,7 +58,7 @@ trait RecordsActivity
     }
 
     /**
-     * Determine the activity type.
+     * Определите тип активности.
      *
      * @param  string $event
      * @return string

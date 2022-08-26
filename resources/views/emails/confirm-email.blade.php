@@ -1,12 +1,12 @@
 @component('mail::message')
-# One Last Step
+# Последний шаг
 
-We just need you to confirm your email address to prove that you're a human. You get it, right? Coo.
+Нам нужно подтвердить ваш Email, чтобы удостовериться в том, что вы человек.
 
 @component('mail::button', ['url' => url('/register/confirm?token=' . $user->confirmation_token)])
-Confirm Email
+Подтвердить Email
 @endcomponent
 
-Thanks,<br>
+Спасибо,<br>
 {{ config('app.name') }}
 @endcomponent

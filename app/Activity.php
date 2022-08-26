@@ -7,21 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
 {
     /**
-     * Don't auto-apply mass assignment protection.
+     * Не применяем автоматическую защиту.
      *
      * @var array
      */
     protected $guarded = [];
 
     /**
-     * The accessors to append to the model's array form.
+     * Аксессоры для добавления к форме массива модели.
      *
      * @var array
      */
     protected $appends = ['favoritedModel'];
 
     /**
-     * Fetch the associated subject for the activity.
+     * Получаем связанную тему для действий.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
@@ -31,7 +31,7 @@ class Activity extends Model
     }
 
     /**
-     * Fetch the model record for the subject of the favorite.
+     * Получите записанную модель для избранной темы.
      */
     public function getFavoritedModelAttribute()
     {
@@ -49,7 +49,7 @@ class Activity extends Model
     }
 
     /**
-     * Fetch an activity feed for the given user.
+     * Получить обратную связь активности для данного пользователя.
      *
      * @param  User $user
      * @return \Illuminate\Database\Eloquent\Collection;

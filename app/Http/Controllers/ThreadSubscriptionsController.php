@@ -7,7 +7,7 @@ use App\Thread;
 class ThreadSubscriptionsController extends Controller
 {
     /**
-     * Store a new thread subscription.
+     * Сохраняет новую подписку на тред.
      *
      * @param int    $channelId
      * @param Thread $thread
@@ -18,7 +18,7 @@ class ThreadSubscriptionsController extends Controller
     }
 
     /**
-     * Delete an existing thread subscription.
+     * Удаляет существующую подписку на тред.
      *
      * @param int    $channelId
      * @param Thread $thread

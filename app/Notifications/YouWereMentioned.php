@@ -16,7 +16,7 @@ class YouWereMentioned extends Notification
     protected $subject;
 
     /**
-     * Create a new notification instance.
+     * Создать новый экземпляр уведомления.
      *
      * @param $subject
      */
@@ -26,7 +26,7 @@ class YouWereMentioned extends Notification
     }
 
     /**
-     * Get the notification's delivery channels.
+     * Получаем уведомления о каналах.
      *
      * @param  mixed $notifiable
      * @return array
@@ -37,7 +37,7 @@ class YouWereMentioned extends Notification
     }
 
     /**
-     * Get the array representation of the notification.
+     * Получаем представленные уведомления в виде массива.
      *
      * @param  mixed $notifiable
      * @return array
@@ -52,15 +52,15 @@ class YouWereMentioned extends Notification
     }
 
     /**
-     * Get a message title for the notification.
+     * Получаем тему сообщения для уведомления.
      */
     public function message()
     {
-        return sprintf('%s mentioned you in "%s"', $this->user()->username, $this->subject->title());
+        return sprintf('%s упомянул вас в "%s"', $this->user()->username, $this->subject->title());
     }
 
     /**
-     * Get the associated user for the subject.
+     * Получаем связанного пользователя для темы.
      */
     public function user()
     {

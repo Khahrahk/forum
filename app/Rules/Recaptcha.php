@@ -10,7 +10,7 @@ class Recaptcha implements Rule
     const URL = 'https://www.google.com/recaptcha/api/siteverify';
 
     /**
-     * Determine if the validation rule passes.
+     * Определяем, проходит ли правило проверки.
      *
      * @param  string $attribute
      * @param  mixed  $value
@@ -26,17 +26,17 @@ class Recaptcha implements Rule
     }
 
     /**
-     * Get the validation error message.
+     * Получаем сообщение об ошибке проверки.
      *
      * @return string
      */
     public function message()
     {
-        return 'The recaptcha verification failed. Try again.';
+        return 'Проверка капчи не удалась. Попробуйте еще раз.';
     }
 
     /**
-     * Determine if Recaptcha's keys are set to test mode.
+     * Определяем, установлены ли ключи Рекапчи в тестовый режим.
      *
      * @return bool
      */

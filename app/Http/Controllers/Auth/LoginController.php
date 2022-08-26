@@ -10,26 +10,25 @@ class LoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Login Controller
+    | Контроллер входа
     |--------------------------------------------------------------------------
     |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
+    | Этот контроллер обрабатывает аутентификацию пользователей для сайта и
+    | перенаправляя их на домашний экран.
     |
     */
 
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Куда перенаправлять пользователей после входа.
      *
      * @var string
      */
     protected $redirectTo = '/threads';
 
     /**
-     * Create a new controller instance.
+     * Создает новый экземпляр контроллера.
      *
      * @return void
      */
@@ -39,7 +38,7 @@ class LoginController extends Controller
     }
 
     /**
-     * The user has been authenticated.
+     * Пользователь прошел аутентификацию.
      *
      * @param  \Illuminate\Http\Request $request
      * @param  mixed $user

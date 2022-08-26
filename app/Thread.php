@@ -14,28 +14,28 @@ class Thread extends Model
     use RecordsActivity, Searchable;
 
     /**
-     * Don't auto-apply mass assignment protection.
+     * Не применяем автоматическую защиту.
      *
      * @var array
      */
     protected $guarded = [];
 
     /**
-     * The relationships to always eager-load.
+     * Связи к постоянной подгрузке.
      *
      * @var array
      */
     protected $with = ['creator', 'channel'];
 
     /**
-     * The accessors to append to the model's array form.
+     * Аксессоры для добавления к форме массива модели.
      *
      * @var array
      */
     protected $appends = ['path'];
 
     /**
-     * The attributes that should be cast to native types.
+     * Атрибуты, которые следует приводить к собственным типам.
      *
      * @var array
      */
@@ -45,7 +45,7 @@ class Thread extends Model
     ];
 
     /**
-     * Boot the model.
+     * Загружаем модель.
      */
     protected static function boot()
     {
@@ -67,7 +67,7 @@ class Thread extends Model
     }
 
     /**
-     * Get a string path for the thread.
+     * Получаем строковый путь для треда.
      *
      * @return string
      */
@@ -77,7 +77,7 @@ class Thread extends Model
     }
 
     /**
-     * Fetch the path to the thread as a property.
+     * Получаем путь к треду как свойство.
      */
     public function getPathAttribute()
     {
@@ -89,7 +89,7 @@ class Thread extends Model
     }
 
     /**
-     * A thread belongs to a creator.
+     * Тред принадлежит пользователю.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -99,7 +99,7 @@ class Thread extends Model
     }
 
     /**
-     * Get the title for the thread.
+     * Получаем заголовок треда.
      */
     public function title()
     {
@@ -107,7 +107,7 @@ class Thread extends Model
     }
 
     /**
-     * A thread is assigned a channel.
+     * Тред принадлежит к какому-то каналу.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -117,7 +117,7 @@ class Thread extends Model
     }
 
     /**
-     * A thread may have many replies.
+     * Тред может иметь много ответов.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -127,7 +127,7 @@ class Thread extends Model
     }
 
     /**
-     * A thread can have a best reply.
+     * Тред может иметь лучший ответ.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -137,7 +137,7 @@ class Thread extends Model
     }
 
     /**
-     * Add a reply to the thread.
+     * Добавляем ответ к треду.
      *
      * @param  array $reply
      * @return Model
@@ -152,7 +152,7 @@ class Thread extends Model
     }
 
     /**
-     * Apply all relevant thread filters.
+     * Применяем все соответствующие фильтры для тредов.
      *
      * @param  Builder       $query
      * @param  ThreadFilters $filters
@@ -164,7 +164,7 @@ class Thread extends Model
     }
 
     /**
-     * Subscribe a user to the current thread.
+     * Подписываем пользователя на текущий тред.
      *
      * @param  int|null $userId
      * @return $this
@@ -179,7 +179,7 @@ class Thread extends Model
     }
 
     /**
-     * Unsubscribe a user from the current thread.
+     * Отписываем пользователя от текущего треда.
      *
      * @param int|null $userId
      */
@@ -191,7 +191,7 @@ class Thread extends Model
     }
 
     /**
-     * A thread can have many subscriptions.
+     * Тред может иметь много подписок.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -201,7 +201,7 @@ class Thread extends Model
     }
 
     /**
-     * Determine if the current user is subscribed to the thread.
+     * Проверяем, подписан ли данный пользователь на тред.
      *
      * @return bool
      */
@@ -217,7 +217,7 @@ class Thread extends Model
     }
 
     /**
-     * Determine if the thread has been updated since the user last read it.
+     * Проверяем, был ли обновлен тред с того момента как пользователь его прочитал.
      *
      * @param  User $user
      * @return bool
@@ -230,7 +230,7 @@ class Thread extends Model
     }
 
     /**
-     * Get the route key name.
+     * Получаем имена ключей маршрутов.
      *
      * @return string
      */
@@ -240,7 +240,7 @@ class Thread extends Model
     }
 
     /**
-     * Access the body attribute.
+     * Доступ к атрибуту освного текста.
      *
      * @param  string $body
      * @return string
@@ -251,7 +251,7 @@ class Thread extends Model
     }
 
     /**
-     * Set the proper slug attribute.
+     * Установливаем правильный атрибут заголовка.
      *
      * @param string $value
      */
@@ -265,7 +265,7 @@ class Thread extends Model
     }
 
     /**
-     * Mark the given reply as the best answer.
+     * Помечаем данный ответ как лучший.
      *
      * @param Reply $reply
      */
@@ -281,7 +281,7 @@ class Thread extends Model
     }
 
     /**
-     * Reset the best reply record.
+     * Сбросываем записанный лучший ответ.
      */
     public function removeBestReply()
     {
@@ -291,7 +291,7 @@ class Thread extends Model
     }
 
     /**
-     * Determine if the thread has a current best reply.
+     * Проверяем, есть ли у треда лучший ответ.
      *
      * @return bool
      */
@@ -301,7 +301,7 @@ class Thread extends Model
     }
 
     /**
-     * Get the indexable data array for the model.
+     * Получаем индексированный массив данных для модели.
      *
      * @return array
      */

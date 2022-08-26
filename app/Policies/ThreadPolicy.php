@@ -11,7 +11,7 @@ class ThreadPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can update the thread.
+     * Определяем, может ли пользователь обновлять тред.
      *
      * @param  \App\User   $user
      * @param  \App\Thread $thread

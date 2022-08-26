@@ -7,7 +7,7 @@ use App\Reply;
 class FavoritesController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Создает новый экземпляр контроллера.
      */
     public function __construct()
     {
@@ -15,7 +15,7 @@ class FavoritesController extends Controller
     }
 
     /**
-     * Store a new favorite in the database.
+     * Сохраняет новое избранное в базе данных.
      *
      * @param  Reply $reply
      */
@@ -27,7 +27,7 @@ class FavoritesController extends Controller
     }
 
     /**
-     * Delete the favorite.
+     * Удаляет избранное.
      *
      * @param Reply $reply
      */

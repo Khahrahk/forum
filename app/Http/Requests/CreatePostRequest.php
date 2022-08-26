@@ -9,7 +9,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class CreatePostRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Определите, разрешен ли пользователю этот запрос..
      *
      * @return bool
      */
@@ -19,7 +19,7 @@ class CreatePostRequest extends FormRequest
     }
 
     /**
-     * Handle a failed authorization attempt.
+     * Обработка неудачной попытки авторизации.
      *
      * @return void
      *
@@ -28,12 +28,12 @@ class CreatePostRequest extends FormRequest
     protected function failedAuthorization()
     {
         throw new ThrottleException(
-            'You are replying too frequently. Please take a break.'
+            'Вы слишком часто отвечаете. Пожалуйста, сделайте перерыв.'
         );
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Получите правила проверки, применимые к запросу.
      *
      * @return array
      */

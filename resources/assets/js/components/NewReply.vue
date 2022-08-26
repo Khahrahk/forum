@@ -2,23 +2,22 @@
     <div class="py-6 ml-10">
         <div v-if="! signedIn">
             <p class="text-center text-sm text-grey-dark">
-                Please <a href="/login" @click.prevent="$modal.show('login')" class="text-blue link">sign in</a> to participate in this
-                discussion.
+                Пожалуйста <a href="/login" @click.prevent="$modal.show('login')" class="text-grey link">войдите</a> что бы общаться.
             </p>
         </div>
 
         <div v-else-if="! confirmed">
-            To participate in this thread, please check your email and confirm your account.
+            Чтобы общаться, подтвердите ваш Email
         </div>
 
         <div v-else>
             <div class="mb-3">
-                <wysiwyg name="body" v-model="body" placeholder="Have something to say?"></wysiwyg>
+                <wysiwyg name="body" v-model="body" placeholder="Есть что сказать?"></wysiwyg>
             </div>
 
             <button type="submit"
-                    class="btn is-green"
-                    @click="addReply">Post</button>
+                    class="btn bg-black hover:bg-grey-darkest"
+                    @click="addReply">Запостить</button>
         </div>
     </div>
 </template>
@@ -66,7 +65,7 @@ export default {
                 .then(({ data }) => {
                     this.body = "";
 
-                    flash("Your reply has been posted.");
+                    flash("Ваш ответ был опубликован.");
 
                     this.$emit("created", data);
                 });

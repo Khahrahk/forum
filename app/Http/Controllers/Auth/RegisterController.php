@@ -26,14 +26,14 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Куда перенаправлять пользователей после регистрации.
      *
      * @var string
      */
     protected $redirectTo = '/threads';
 
     /**
-     * Create a new controller instance.
+     * Создает новый экземпляр контроллера.
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Получает валидацию для входящего запроса на регистрацию.
      *
      * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
@@ -59,7 +59,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Создает новый экземпляр пользователя после действительной регистрации.
      *
      * @param  array $data
      * @return User
@@ -76,7 +76,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * The user has been registered.
+     * Пользователь зарегистрирован.
      *
      * @param  \Illuminate\Http\Request $request
      * @param  \App\User                $user

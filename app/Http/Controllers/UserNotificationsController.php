@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class UserNotificationsController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Создает новый экземпляр контроллера.
      */
     public function __construct()
     {
@@ -13,7 +13,7 @@ class UserNotificationsController extends Controller
     }
 
     /**
-     * Fetch all unread notifications for the user.
+     * Получить все непрочитанные уведомления для пользователя.
      *
      * @return mixed
      */
@@ -23,7 +23,7 @@ class UserNotificationsController extends Controller
     }
 
     /**
-     * Mark a specific notification as read.
+     * Отметить конкретное уведомление как прочитанное.
      *
      * @param \App\User $user
      * @param int       $notificationId

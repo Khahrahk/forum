@@ -18,13 +18,13 @@
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
 
-                        <button type="submit" class="btn bg-red">Delete Thread</button>
+                        <button type="submit" class="btn bg-red">Удалить тред</button>
                     </form>
                 @endcan
 
                 <div>
-                    <button class="btn mr-2" @click="resetForm">Cancel</button>
-                    <button class="btn bg-blue" @click="update">Update</button>
+                    <button class="btn mr-2" @click="resetForm">Отменить</button>
+                    <button class="btn bg-black" @click="update">Обновить</button>
                 </div>
             </div>
         </div>
@@ -39,23 +39,23 @@
              alt="{{ $thread->creator->username }}"
              width="36"
              height="36"
-             class="mr-1 bg-blue-darker rounded-full p-2">
+             class="mr-1 bg-grey-darker rounded-full p-2">
 
         <div class="flex-1 border-b border-grey-lighter pb-8 ml-4">
-            <h1 class="text-blue mb-2 text-2xl font-normal -mt-1" v-text="title"></h1>
+            <h1 class="text-black mb-2 text-2xl font-normal -mt-1" v-text="title"></h1>
 
             <p class="text-xs text-grey-darker mb-4">
-                Posted by <a href="{{ route('profile', $thread->creator) }}" class="text-blue link">
+                Запостил <a href="{{ route('profile', $thread->creator) }}" class="text-grey link">
                     {{ $thread->creator->username }} ({{ $thread->creator->reputation }} XP)
                 </a>
 
                 <span v-if="! editing">
                     <span v-if="(authorize('isAdmin') || authorize('owns', thread))">
-                        <a href="#" class="text-blue link pl-2 ml-2 border-l" @click.prevent="editing = true">Edit</a>
+                        <a href="#" class="text-grey link pl-2 ml-2 border-l" @click.prevent="editing = true">Редактировать</a>
 
                         <span v-if="authorize('isAdmin')">
-                            <a href="#" class="link pl-2 ml-2 border-l" :class="locked ? 'font-bold' : ''" @click.prevent="toggleLock" v-text="locked ? 'Unlock' : 'Lock'"></a>
-                            <a href="#" class="link pl-2 ml-2 border-l" :class="pinned ? 'font-bold' : ''" @click.prevent="togglePin" v-text="pinned ? 'Unpin' : 'Pin'"></a>
+                            <a href="#" class="link pl-2 ml-2 border-l" :class="locked ? 'font-bold' : ''" @click.prevent="toggleLock" v-text="locked ? 'Открыть' : 'Закрыть'"></a>
+                            <a href="#" class="link pl-2 ml-2 border-l" :class="pinned ? 'font-bold' : ''" @click.prevent="togglePin" v-text="pinned ? 'Снять метку' : 'Поставтиь метку'"></a>
                         </span>
                     </span>
 

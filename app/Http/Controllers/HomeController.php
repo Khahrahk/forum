@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Создает новый экземпляр контроллера.
      *
      * @return void
      */
@@ -15,7 +15,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Показывает панель сайта.
      *
      * @return \Illuminate\Http\Response
      */

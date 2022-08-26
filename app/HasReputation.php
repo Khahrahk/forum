@@ -5,7 +5,7 @@ namespace App;
 trait HasReputation
 {
     /**
-     * Award reputation points to the model.
+     * Награждаем модель очками репутации.
      *
      * @param  string $action
      */
@@ -15,7 +15,7 @@ trait HasReputation
     }
 
     /**
-     * Reduce reputation points for the model.
+     * Уменьшаем очки репутации для модели.
      *
      * @param  string $action
      */

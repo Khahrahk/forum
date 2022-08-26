@@ -8,7 +8,7 @@ use App\Inspections\Spam;
 class SpamFree
 {
     /**
-     * Determine if the given attribute passes our spam validation.
+     * Определяем, проходит ли данный атрибут проверку на спам.
      *
      * @param  string $attribute
      * @param  string $value

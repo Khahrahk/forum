@@ -24,7 +24,7 @@ export default {
                 })
                 .catch(error => {
                     this.feedback =
-                        "The given credentials are incorrect. Please try again.";
+                        "Данные неккоректны, повторите еще раз.";
                     this.loading = false;
                 });
         },

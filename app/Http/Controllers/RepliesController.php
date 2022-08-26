@@ -9,7 +9,7 @@ use App\Http\Requests\CreatePostRequest;
 class RepliesController extends Controller
 {
     /**
-     * Create a new RepliesController instance.
+     * Создает новый экземпляр RepliesController.
      */
     public function __construct()
     {
@@ -17,7 +17,7 @@ class RepliesController extends Controller
     }
 
     /**
-     * Fetch all relevant replies.
+     * Получить все соответствующие ответы.
      *
      * @param int    $channelId
      * @param Thread $thread
@@ -28,7 +28,7 @@ class RepliesController extends Controller
     }
 
     /**
-     * Persist a new reply.
+     * Сохраняет новый ответ.
      *
      * @param  int           $channelId
      * @param  Thread            $thread
@@ -38,7 +38,7 @@ class RepliesController extends Controller
     public function store($channelId, Thread $thread, CreatePostRequest $form)
     {
         if ($thread->locked) {
-            return response('Thread is locked', 422);
+            return response('Тред был закрыт', 422);
         }
 
         return $thread->addReply([
@@ -48,7 +48,7 @@ class RepliesController extends Controller
     }
 
     /**
-     * Update an existing reply.
+     * Обновляет существующий ответ.
      *
      * @param Reply $reply
      */
@@ -60,7 +60,7 @@ class RepliesController extends Controller
     }
 
     /**
-     * Delete the given reply.
+     * Удаляет данный ответ.
      *
      * @param  Reply $reply
      * @return \Illuminate\Http\RedirectResponse
@@ -72,7 +72,7 @@ class RepliesController extends Controller
         $reply->delete();
 
         if (request()->expectsJson()) {
-            return response(['status' => 'Reply deleted']);
+            return response(['status' => 'Ответ удален']);
         }
 
         return back();

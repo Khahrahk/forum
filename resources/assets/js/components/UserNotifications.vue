@@ -1,6 +1,6 @@
 <template>
     <div @mouseover="activate" @mouseout="deactivate">
-       <div class="rounded-full bg-blue-darkest w-10 h-10 flex items-center justify-center mr-4 cursor-pointer relative z-10">
+       <div class="rounded-full bg-black w-10 h-10 flex items-center justify-center mr-4 cursor-pointer relative z-10">
             <!-- "New Notifications Available" bubble. -->
             <div class="rounded-full bg-red w-2 h-2 absolute pin-t pin-r mt-1" v-if="notifications.length"></div>
 
@@ -20,7 +20,7 @@
             <div class="bg-grey-light p-6 text-black absolute rounded"
                  style="border-top-right-radius: 28px 22px; width: 313px; top: -32px; right: 23px"
             >
-                <h4 class="mb-4">Notifications</h4>
+                <h4 class="mb-4">Оповещения</h4>
 
                 <ul class="list-reset">
                     <li v-for="(notification, index) in notifications"
@@ -39,7 +39,7 @@
                         </a>
                     </li>
 
-                    <li v-if="! notifications.length" class="text-xs">You have zero notifications.</li>
+                    <li v-if="! notifications.length" class="text-xs">У вас нет оповещений.</li>
                 </ul>
             </div>
         </div>

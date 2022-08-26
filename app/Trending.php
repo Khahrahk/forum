@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Cache;
 class Trending
 {
     /**
-     * Fetch all trending threads.
+     * Получаем все популярные треды.
      *
      * @return array
      */
@@ -20,7 +20,7 @@ class Trending
     }
 
     /**
-     * Push a new thread to the trending list.
+     * Поместите новый тред в список популярных.
      *
      * @param Thread $thread
      */
@@ -38,7 +38,7 @@ class Trending
     }
 
     /**
-     * Get the trending score of the given thread.
+     * Получаем очки популярности для данного треда.
      *
      * @param int
      */
@@ -54,7 +54,7 @@ class Trending
     }
 
     /**
-     * Reset all trending threads.
+     * Сбрасываем все популярные треды.
      */
     public function reset()
     {
@@ -62,7 +62,7 @@ class Trending
     }
 
     /**
-     * Get the cache key name.
+     * Получаем ключи имени кэша.
      *
      * @return string
      */

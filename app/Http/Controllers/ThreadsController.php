@@ -12,7 +12,7 @@ use Illuminate\Validation\Rule;
 class ThreadsController extends Controller
 {
     /**
-     * Create a new ThreadsController instance.
+     * Создает новый экземпляр ThreadsController.
      */
     public function __construct()
     {
@@ -20,7 +20,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Показать список тредов.
      *
      * @param  Channel      $channel
      * @param ThreadFilters $filters
@@ -42,7 +42,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Показать форму для создания нового треда.
      *
      * @return \Illuminate\Http\Response
      */
@@ -54,7 +54,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохраните вновь созданный тред в хранилище.
      *
      * @param  \App\Rules\Recaptcha $recaptcha
      * @return \Illuminate\Http\Response
@@ -70,7 +70,6 @@ class ThreadsController extends Controller
                     $query->where('archived', false);
                 })
             ],
-            'g-recaptcha-response' => ['required', $recaptcha]
         ]);
 
         $thread = Thread::create([
@@ -85,11 +84,11 @@ class ThreadsController extends Controller
         }
 
         return redirect($thread->path())
-            ->with('flash', 'Your thread has been published!');
+            ->with('flash', 'Ваш тред был опубликован!');
     }
 
     /**
-     * Display the specified resource.
+     * Показать указанный тред.
      *
      * @param  int      $channel
      * @param  \App\Thread  $thread
@@ -110,7 +109,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Update the given thread.
+     * Обновить данный тред.
      *
      * @param string $channel
      * @param Thread $thread
@@ -128,7 +127,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Delete the given thread.
+     * Удалить данный тред.
      *
      * @param        $channel
      * @param Thread $thread
@@ -148,7 +147,7 @@ class ThreadsController extends Controller
     }
 
     /**
-     * Fetch all relevant threads.
+     * Получить все соответствующие треды.
      *
      * @param Channel       $channel
      * @param ThreadFilters $filters

@@ -19,14 +19,14 @@ abstract class Filters
     protected $builder;
 
     /**
-     * Registered filters to operate upon.
+     * Зарегистрированные фильтры для работы.
      *
      * @var array
      */
     protected $filters = [];
 
     /**
-     * Create a new ThreadFilters instance.
+     * Создает новый экземпляр ThreadFilters.
      *
      * @param Request $request
      */
@@ -36,7 +36,7 @@ abstract class Filters
     }
 
     /**
-     * Apply the filters.
+     * Применить фильтры.
      *
      * @param  \Illuminate\Database\Eloquent\Builder $builder
      * @return \Illuminate\Database\Eloquent\Builder
@@ -55,7 +55,7 @@ abstract class Filters
     }
 
     /**
-     * Fetch all relevant filters from the request.
+     * Получить все соответствующие фильтры из запроса.
      *
      * @return array
      */

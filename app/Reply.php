@@ -10,28 +10,28 @@ class Reply extends Model
     use Favoritable, RecordsActivity;
 
     /**
-     * Don't auto-apply mass assignment protection.
+     * Не добавляем автоматическую защиту.
      *
      * @var array
      */
     protected $guarded = [];
 
     /**
-     * The relations to eager load on every query.
+     * Определяем зависимости нагрузи от каждого запроса.
      *
      * @var array
      */
     protected $with = ['owner', 'favorites'];
 
     /**
-     * The accessors to append to the model's array form.
+     * Аксессоры для добавления к форме массива модели.
      *
      * @var array
      */
     protected $appends = ['favoritesCount', 'isFavorited', 'isBest', 'xp', 'path'];
 
     /**
-     * Boot the reply instance.
+     * Загружаем экземпляр ответа.
      */
     protected static function boot()
     {
@@ -55,7 +55,7 @@ class Reply extends Model
     }
 
     /**
-     * A reply has an owner.
+     * Ответ принадлежит пользователю.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -65,7 +65,7 @@ class Reply extends Model
     }
 
     /**
-     * A reply belongs to a thread.
+     * Ответ принадлежит треду.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -75,7 +75,7 @@ class Reply extends Model
     }
 
     /**
-     * Get the related title for the reply.
+     * Получаем соответствующий заголовок для ответа.
      */
     public function title()
     {
@@ -83,7 +83,7 @@ class Reply extends Model
     }
 
     /**
-     * Determine if the reply was just published a moment ago.
+     * Определяем, был ли ответ опубликован только что.
      *
      * @return bool
      */
@@ -93,7 +93,7 @@ class Reply extends Model
     }
 
     /**
-     * Determine the path to the reply.
+     * Определяем путь к ответу.
      *
      * @return string
      */
@@ -109,7 +109,7 @@ class Reply extends Model
     }
 
     /**
-     * Fetch the path to the thread as a property.
+     * Получаем путь к потоку в виде свойства.
      */
     public function getPathAttribute()
     {
@@ -117,7 +117,7 @@ class Reply extends Model
     }
 
     /**
-     * Access the body attribute.
+     * Доступ к атрибуту основного текста.
      *
      * @param  string $body
      * @return string
@@ -128,7 +128,7 @@ class Reply extends Model
     }
 
     /**
-     * Set the body attribute.
+     * Устанавливаем атррибуты для основого текста.
      *
      * @param string $body
      */
@@ -142,7 +142,7 @@ class Reply extends Model
     }
 
     /**
-     * Determine if the current reply is marked as the best.
+     * Определяем, отмечен ли текущий ответ как лучший.
      *
      * @return bool
      */
@@ -152,7 +152,7 @@ class Reply extends Model
     }
 
     /**
-     * Determine if the current reply is marked as the best.
+     * Определяем, отмечен ли текущий ответ как лучший.
      *
      * @return bool
      */
@@ -162,7 +162,7 @@ class Reply extends Model
     }
 
     /**
-     * Calculate the correct XP amount earned for the current reply.
+     * Подсчитываем правильную сумму XP, заработанную за текущий ответ.
      */
     public function getXpAttribute()
     {

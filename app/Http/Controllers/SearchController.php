@@ -7,7 +7,7 @@ use App\Thread;
 class SearchController extends Controller
 {
     /**
-     * Show the search results.
+     * Показать результаты поиска.
      *
      * @return mixed
      */

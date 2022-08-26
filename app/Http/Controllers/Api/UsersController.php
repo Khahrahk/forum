@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class UsersController extends Controller
 {
     /**
-     * Fetch all relevant username.
+     * Получить все соответствующие имена пользователей.
      *
      * @return mixed
      */

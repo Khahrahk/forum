@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class UserAvatarController extends Controller
 {
     /**
-     * Store a new user avatar.
+     * Сохранить новый аватар пользователя.
      *
      * @return \Illuminate\Http\Response
      */

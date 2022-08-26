@@ -7,7 +7,7 @@ use Closure;
 class Administrator
 {
     /**
-     * Handle an incoming request.
+     * Обработка входящего запроса.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -19,6 +19,6 @@ class Administrator
             return $next($request);
         }
 
-        abort(403, 'You do not have permission to perform this action.');
+        abort(403, 'У вас нет прав для этого действия.');
     }
 }

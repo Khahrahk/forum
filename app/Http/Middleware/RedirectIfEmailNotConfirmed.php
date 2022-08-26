@@ -7,7 +7,7 @@ use Closure;
 class RedirectIfEmailNotConfirmed
 {
     /**
-     * Handle an incoming request.
+     * Обработка входящего запроса.
      *
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure $next
@@ -19,7 +19,7 @@ class RedirectIfEmailNotConfirmed
 
         if (! $user->confirmed && ! $user->isAdmin()) {
             return redirect('/threads')
-                ->with('flash', 'You must first confirm your email address.');
+                ->with('flash', 'Для начала вы должны подтвердить ваш Email.');
         }
 
         return $next($request);

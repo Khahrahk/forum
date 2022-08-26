@@ -7,7 +7,7 @@ use App\Reply;
 class BestRepliesController extends Controller
 {
     /**
-     * Mark the best reply for a thread.
+     * Отметить лучший ответ для обсуждения.
      *
      * @param  Reply $reply
      * @throws \Illuminate\Auth\Access\AuthorizationException

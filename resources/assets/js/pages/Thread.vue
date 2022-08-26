@@ -65,10 +65,10 @@ export default {
                     this.title = this.form.title;
                     this.body = this.form.body;
 
-                    flash("Your thread has been updated.");
+                    flash("Ваш тред был обновлен.");
                 })
                 .catch(error => {
-                    this.feedback = "Whoops, validation failed.";
+                    this.feedback = "Упс, повторите еще раз.";
                     this.errors = error.response.data.errors;
                 });
         },

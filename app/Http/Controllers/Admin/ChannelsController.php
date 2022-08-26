@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class ChannelsController extends Controller
 {
     /**
-     * Show all channels.
+     * Показать все каналы.
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,8 +20,9 @@ class ChannelsController extends Controller
         return view('admin.channels.index', compact('channels'));
     }
 
+
     /**
-     * Show the form to create a new channel.
+     * Показать форму для создания канала.
      *
      * @return \Illuminate\Http\Response
      */
@@ -31,7 +32,7 @@ class ChannelsController extends Controller
     }
 
     /**
-     * Show the form to edit an existing channel.
+     * Показать форму для редактирования существующего канала.
      *
      * @return \Illuminate\Http\Response
      */
@@ -41,7 +42,7 @@ class ChannelsController extends Controller
     }
 
     /**
-     * Update an existing channel.
+     * Обновить существующий канал.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -63,11 +64,11 @@ class ChannelsController extends Controller
         }
 
         return redirect(route('admin.channels.index'))
-            ->with('flash', 'Your channel has been updated!');
+            ->with('flash', 'Ваш канал был обновлен!');
     }
 
     /**
-     * Store a new channel.
+     * Сохранить новый канал.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -88,6 +89,6 @@ class ChannelsController extends Controller
         }
 
         return redirect(route('admin.channels.index'))
-            ->with('flash', 'Your channel has been created!');
+            ->with('flash', 'Ваш канал был создан!');
     }
 }

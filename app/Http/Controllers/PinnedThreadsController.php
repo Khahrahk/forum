@@ -7,7 +7,7 @@ use App\Thread;
 class PinnedThreadsController extends Controller
 {
     /**
-     * Pin the given thread.
+     * Отметить данную тему.
      *
      * @param \App\Thread $thread
      */
@@ -17,7 +17,7 @@ class PinnedThreadsController extends Controller
     }
 
     /**
-     * Un-Pin the given thread.
+     * Отменить закрепление данной темы.
      *
      * @param \App\Thread $thread
      */

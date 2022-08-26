@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class ChannelsController extends Controller
 {
     /**
-     * Fetch all channels.
+     * Получить все каналы.
      */
     public function index()
     {

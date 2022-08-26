@@ -11,7 +11,7 @@ class ReplyPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine if the authenticated user has permission to update a reply.
+     * Определяем, есть ли у аутентифицированного пользователя разрешение на обновление ответа.
      *
      * @param  User  $user
      * @param  Reply $reply
@@ -23,7 +23,7 @@ class ReplyPolicy
     }
 
     /**
-     * Determine if the authenticated user has permission to create a new reply.
+     * Определяем, есть ли у аутентифицированного пользователя разрешение на создание нового ответа.
      *
      * @param  User $user
      * @return bool

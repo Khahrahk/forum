@@ -1,15 +1,15 @@
 <template>
     <activity-layout>
         <span slot="activity">
-            added a&nbsp;<a class="mr-1 text-blue" :href="activity.subject.path"><strong>thread</strong></a>
-            {{ humanTime(activity.subject.created_at) }} in:
+            добавил&nbsp;<a class="mr-1 text-black" :href="activity.subject.path"><strong>тред</strong></a>
+            {{ activity.subject.created_at }} в:
         </span>
 
         <div slot="heading" class="text-xl font-semibold my-4">
-            <a class="text-blue font-bold mb-4" :href="activity.subject.path">"{{ activity.subject.title }}"</a>
+            <a class="text-black font-bold mb-4" :href="activity.subject.path">"{{ activity.subject.title }}"</a>
 
             <p class="text-2xs text-grey-darkest font-medium mb-4">
-                Posted By:
+                Запостил:
                 <a :href="activity.subject.creator.username" class="text-blue">
                     {{ activity.subject.creator.username }}
                 </a>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex items-center py-1 text-xs text-grey-darkest">
-                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.subject.path">more</a>
+                &#8943; <a class="ml-1 text-2xs text-black" :href="activity.subject.path">больше</a>
             </div>
         </div>
 
@@ -38,7 +38,7 @@
                     </g>
                 </svg>
 
-                {{ activity.subject.replies_count }} Reply(s)
+                {{ activity.subject.replies_count }} Ответы
             </div>
         </div>
     </activity-layout>

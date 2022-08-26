@@ -12,14 +12,14 @@ class PleaseConfirmYourEmail extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     /**
-     * The user associated with the email.
+     * Пользователь, связанный с электронной почтой.
      *
      * @var \App\User
      */
     public $user;
 
     /**
-     * Create a new mailable instance.
+     * Создать новый почтовый экземпляр.
      *
      * @param \App\User $user
      */
@@ -29,7 +29,7 @@ class PleaseConfirmYourEmail extends Mailable implements ShouldQueue
     }
 
     /**
-     * Build the email.
+     * Создает новое письмо.
      *
      * @return $this
      */

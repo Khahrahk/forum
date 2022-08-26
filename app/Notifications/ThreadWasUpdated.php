@@ -7,21 +7,21 @@ use Illuminate\Notifications\Notification;
 class ThreadWasUpdated extends Notification
 {
     /**
-     * The thread that was updated.
+     * Тред, которая была обновлена.
      *
      * @var \App\Thread
      */
     protected $thread;
 
     /**
-     * The new reply.
+     * Новый ответ.
      *
      * @var \App\Reply
      */
     protected $reply;
 
     /**
-     * Create a new notification instance.
+     * Создает новый экземпляр уведомления.
      *
      * @param \App\Thread $thread
      * @param \App\Reply  $reply
@@ -33,7 +33,7 @@ class ThreadWasUpdated extends Notification
     }
 
     /**
-     * Get the notification's delivery channels.
+     * Получаем уведомления о каналах.
      *
      * @return array
      */
@@ -43,14 +43,14 @@ class ThreadWasUpdated extends Notification
     }
 
     /**
-     * Get the array representation of the notification.
+     * Получаем представленные уведомления в виде массива.
      *
      * @return array
      */
     public function toArray()
     {
         return [
-            'message' => $this->reply->owner->name.' replied to '.$this->thread->title,
+            'message' => $this->reply->owner->name.' ответил '.$this->thread->title,
             'notifier' => $this->reply->owner,
             'link' => $this->reply->path()
         ];

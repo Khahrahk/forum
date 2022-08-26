@@ -8,7 +8,7 @@ use App\Notifications\YouWereMentioned;
 class NotifyMentionedUsers
 {
     /**
-     * Handle the event.
+     * Обрабатывает событие.
      *
      * @param  mixed $event
      * @return void
@@ -22,7 +22,7 @@ class NotifyMentionedUsers
     }
 
     /**
-     * Fetch all mentioned users within the reply's body.
+     * Получить всех упомянутых пользователей в основной части ответа.
      *
      * @return array
      */

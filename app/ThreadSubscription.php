@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class ThreadSubscription extends Model
 {
     /**
-     * The attributes that aren't mass assignable.
+     * Атрибуты, которые не назначаются массово.
      *
      * @var array
      */
     protected $guarded = [];
 
     /**
-     * Get the user associated with the subscription.
+     * Получаем пользователя, связанного с подпиской.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -25,7 +25,7 @@ class ThreadSubscription extends Model
     }
 
     /**
-     * Get the thread associated with the subscription.
+     * Получите тред, связанный с подпиской.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -35,7 +35,7 @@ class ThreadSubscription extends Model
     }
 
     /**
-     * Notify the related user that the thread was updated.
+     * Оповещаем данного пользователя о том, что данный тред был обновлен.
      *
      * @param \App\Reply $reply
      */

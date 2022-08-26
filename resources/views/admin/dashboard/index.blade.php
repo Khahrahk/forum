@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
 
 @section('administration-content')
-    <p>You are on the administration dashboard.</p>
+    <p>Вы в панели администратора.</p>
 @endsection

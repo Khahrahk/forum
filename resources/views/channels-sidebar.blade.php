@@ -1,6 +1,6 @@
 <div class="border-l border-r p-6 bg-white w-48">
     <div class="widget">
-        <h4 class="widget-heading">Channels</h4>
+        <h4 class="widget-heading">Каналы</h4>
 
         <ul class="list-reset">
             @foreach ($channels as $channel)

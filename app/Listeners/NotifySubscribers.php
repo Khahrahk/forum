@@ -7,7 +7,7 @@ use App\Events\ThreadReceivedNewReply;
 class NotifySubscribers
 {
     /**
-     * Handle the event.
+     * Обрабатывает событие.
      *
      * @param  ThreadReceivedNewReply $event
      * @return void

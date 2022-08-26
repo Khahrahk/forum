@@ -5,7 +5,7 @@ namespace App\Inspections;
 class Spam
 {
     /**
-     * All registered inspections.
+     * Все зарегистрированные проверки.
      *
      * @var array
      */
@@ -14,7 +14,7 @@ class Spam
     ];
 
     /**
-     * Detect spam.
+     * Обнаруживает спам.
      *
      * @param  string $body
      * @return bool

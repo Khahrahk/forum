@@ -53,7 +53,7 @@
                 data.append('avatar', avatar);
 
                 axios.post(`/api/users/${this.user.username}/avatar`, data)
-                    .then(() => flash('Avatar uploaded!'));
+                    .then(() => flash('Аватар обновлен!'));
             }
         }
     }

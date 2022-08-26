@@ -5,15 +5,15 @@
 
             <div class="flex mb-6 -mx-4">
                 <div class="flex-1 px-4">
-                    <label for="title" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Title</label>
+                    <label for="title" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Заголовок</label>
                     <input type="text" class="w-full p-2 leading-normal" id="title" name="title" value="{{ old('title') }}" required>
                 </div>
 
                 <div class="flex-1 px-4">
-                    <label for="channel_id" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Channel</label>
+                    <label for="channel_id" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Канал</label>
 
                     <select name="channel_id" id="channel_id" class="block appearance-none w-full bg-white rounded-none border border-grey-light text-grey-darker py-2 px-4 leading-normal pr-8" required>
-                        <option value="">Choose One...</option>
+                        <option value="">Выберите...</option>
 
                         @foreach ($channels as $channel)
                             <option value="{{ $channel->id }}" {{ old('channel_id') == $channel->id ? 'selected' : '' }}>
@@ -33,8 +33,8 @@
             </div>
 
             <div class="flex justify-end">
-                <a href="#" class="btn mr-4" @click="$modal.hide('new-thread')">Cancel</a>
-                <button type="submit" class="btn is-green">Publish</button>
+                <a href="#" class="btn mr-4 bg-black hover:bg-grey-darkest" @click="$modal.hide('new-thread')">Отменить</a>
+                <button type="submit" class="btn bg-black hover:bg-grey-darkest">Опубликовать</button>
             </div>
 
             @if (count($errors))

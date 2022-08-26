@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller
 {
     /**
-     * Show the main dashboard page.
+     * Показывает главную форму панели администратора.
      *
      * @return \Illuminate\Http\Response
      */

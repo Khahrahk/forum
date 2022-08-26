@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class RegisterConfirmationController extends Controller
 {
     /**
-     * Confirm a user's email address.
+     * Подтверждает адрес электронной почты пользователя.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -17,12 +17,12 @@ class RegisterConfirmationController extends Controller
         $user = User::where('confirmation_token', request('token'))->first();
 
         if (! $user) {
-            return redirect(route('threads'))->with('flash', 'Unknown token.');
+            return redirect(route('threads'))->with('flash', 'Неизвестный ключ.');
         }
 
         $user->confirm();
 
         return redirect(route('threads'))
-            ->with('flash', 'Your account is now confirmed! You may post to the forum.');
+            ->with('flash', 'Ваш аккаунт был подтвержден, сейчас вы можете постить.');
     }
 }

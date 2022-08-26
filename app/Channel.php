@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Channel extends Model
 {
     /**
-     * The attributes that aren't mass assignable.
+     * Атрибуты не назначаются массово.
      *
      * @var array
      */
@@ -21,7 +21,7 @@ class Channel extends Model
     ];
 
     /**
-     * Boot the channels model.
+     * Загружаем модель каналов.
      */
     protected static function boot()
     {
@@ -37,7 +37,7 @@ class Channel extends Model
     }
 
     /**
-     * Get the route key name for Laravel.
+     * Получаем имя ключа маршрута для Laravel.
      *
      * @return string
      */
@@ -47,7 +47,7 @@ class Channel extends Model
     }
 
     /**
-     * A channel consists of threads.
+     * Канал состоит из тредов.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -57,7 +57,7 @@ class Channel extends Model
     }
 
     /**
-     * Archive the channel.
+     * Архивируем канал.
      */
     public function archive()
     {
@@ -65,7 +65,7 @@ class Channel extends Model
     }
 
     /**
-     * Set the name of the channel.
+     * Делаем имя анала)).
      *
      * @param string $name
      */
@@ -76,7 +76,7 @@ class Channel extends Model
     }
 
     /**
-     * Get a new query builder that includes archives.
+     * Получаем новый конструктор запросов, который включает архивы.
      */
     public static function withArchived()
     {

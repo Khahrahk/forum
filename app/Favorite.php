@@ -9,14 +9,14 @@ class Favorite extends Model
     use RecordsActivity;
 
     /**
-     * Don't auto-apply mass assignment protection.
+     * Не применяем автоматическую защиту.
      *
      * @var array
      */
     protected $guarded = [];
 
     /**
-     * Fetch the model that was favorited.
+     * Получаем модель, которая была добавлена ​​в избранное.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */

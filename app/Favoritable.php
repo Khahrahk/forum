@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 trait Favoritable
 {
     /**
-     * Boot the trait.
+     * Загружаем избранное.
      */
     protected static function bootFavoritable()
     {
@@ -17,7 +17,7 @@ trait Favoritable
     }
 
     /**
-     * A reply can be favorited.
+     * Ответ, который может быть добавлен в избранное.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
@@ -27,7 +27,7 @@ trait Favoritable
     }
 
     /**
-     * Favorite the current reply.
+     * Добавляем в избранное данный ответ.
      *
      * @return Model
      */
@@ -41,7 +41,7 @@ trait Favoritable
     }
 
     /**
-     * Unfavorite the current reply.
+     * Убираем из избранного данный ответ.
      */
     public function unfavorite()
     {
@@ -51,7 +51,7 @@ trait Favoritable
     }
 
     /**
-     * Determine if the current reply has been favorited.
+     * Определяем, добавлен ли текущий ответ в избранное.
      *
      * @return bool
      */
@@ -61,7 +61,7 @@ trait Favoritable
     }
 
     /**
-     * Fetch the favorited status as a property.
+     * Получаем статус избранного.
      *
      * @return bool
      */
@@ -71,7 +71,7 @@ trait Favoritable
     }
 
     /**
-     * Get the number of favorites for the reply.
+     * Получите количество избранных для ответа.
      *
      * @return int
      */

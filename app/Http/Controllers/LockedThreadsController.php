@@ -7,7 +7,7 @@ use App\Thread;
 class LockedThreadsController extends Controller
 {
     /**
-     * Lock the given thread.
+     * Закрыть данную тему.
      *
      * @param \App\Thread $thread
      */
@@ -17,7 +17,7 @@ class LockedThreadsController extends Controller
     }
 
     /**
-     * Unlock the given thread.
+     * Открыть данную тему.
      *
      * @param \App\Thread $thread
      */

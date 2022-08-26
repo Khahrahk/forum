@@ -7,14 +7,14 @@ use App\User;
 class ThreadFilters extends Filters
 {
     /**
-     * Registered filters to operate upon.
+     * Зарегистрированные фильтры для работы.
      *
      * @var array
      */
     protected $filters = ['by', 'popular', 'unanswered'];
 
     /**
-     * Filter the query by a given username.
+     * Отфильтровать запрос по заданному имени пользователя.
      *
      * @param  string $username
      * @return \Illuminate\Database\Eloquent\Builder
@@ -27,7 +27,7 @@ class ThreadFilters extends Filters
     }
 
     /**
-     * Filter the query according to most popular threads.
+     * Отфильтровать запрос по наиболее популярным темам.
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -39,7 +39,7 @@ class ThreadFilters extends Filters
     }
 
     /**
-     * Filter the query according to those that are unanswered.
+     * Отфильтровать запросы по тем, на которые нет ответа.
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
