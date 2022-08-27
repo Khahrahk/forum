@@ -1,2 +1,2 @@
-# forum (in developing)
+# forum (in development)
 forum project using laravel and vue
